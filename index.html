@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artzain — Web Designer</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar - Nav-bar -->
+    <div class="page-header">
+      <div class="navbar-container">
+        <div class="navbar">
+          <div class="navbar-logo"><a href="#hero">artzain.</a></div>
+          <nav class="navbar-links">
+            <a href="#about" class="about-trigger">A Propos</a>
+            <a href="#projects">Projets</a>
+            <a href="#questions">Questions</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="center">
+          <div class="center-text">
+            <h1>
+              <span class="line-mask"
+                ><span class="line-inner line-title"
+                  >Web Designer et Développeur Front-End.</span
+                ></span
+              >
+            </h1>
+            <p>
+              <span class="line-mask"
+                ><span class="line-inner line-subtitle"
+                  >Pour agences et entreprises ambitieuses</span
+                ></span
+              >
+            </p>
+            <p>
+              <span class="line-mask"
+                ><span class="line-inner line-subtitle"
+                  >de la landing page au site sur-mesure.</span
+                ></span
+              >
+            </p>
+          </div>
+          <div class="availability">
+            <span class="availability-dot"></span>
+            Disponible pour de nouveaux projets.
+          </div>
+        </div>
+
+        <div class="hero-time">
+          <span>Basé en France</span>
+          <span id="paris-time">00:53 GMT+2</span>
+        </div>
+      </div>
+      <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Studio Section -->
+    <section class="studio" id="about">
+      <div class="top-text">
+        <div class="label">
+          <h1 class="section-label">Approche</h1>
+        </div>
+        <div class="text">
+          <p class="fill-text js-fill">
+            <span
+              >Les fondateurs ambitieux méritent un site aussi affûté que ce
+              qu'ils construisent. La plupart des gens avec qui je travaille ont
+              bâti quelque chose de solide, leur site n'a juste pas encore
+              rattrapé le niveau.</span
+            >
+          </p>
+          <p class="fill-text js-fill">
+            <span
+              >Cet écart ne coûte pas que des conversions. Il coûte le moment où
+              quelqu'un comprend enfin ce que vous avez construit.</span
+            >
+          </p>
+          <div class="byline">
+            <div class="byline-avatar">A</div>
+            <div class="byline-info">
+              <span class="byline-name">Artzain</span>
+              <span class="byline-role">Développeur Frond-End</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="works" id="projects">
+      <div class="works-inner">
+        <div class="works-label">
+          <p class="section-label">Projets</p>
+        </div>
+
+        <div class="works-grid">
+          <div class="works-card works-card-1">
+            <a
+              class="works-card-link"
+              aria-label="OsintX - Terminal"
+              href="#projects"
+            >
+              <div class="works-card-media"></div>
+            </a>
+            <div class="works-card-info">
+              <span class="works-card-name">OsintX</span>
+              <span class="works-card-year">Terminal</span>
+            </div>
+          </div>
+
+          <div class="works-card works-card-2">
+            <a
+              class="works-card-link"
+              aria-label="Nova Studio™ - 2023-2024"
+              href="#nova-studio"
+            >
+              <div class="works-card-media"></div>
+            </a>
+            <div class="works-card-info">
+              <span class="works-card-name">Nova Studio™</span>
+              <span class="works-card-year">2023-2024</span>
+            </div>
+          </div>
+
+          <div class="works-card works-card-3">
+            <a
+              class="works-card-link"
+              aria-label="Baseline™ - 2024"
+              href="#baseline"
+            >
+              <div class="works-card-media"></div>
+            </a>
+            <div class="works-card-info">
+              <span class="works-card-name">Baseline™</span>
+              <span class="works-card-year">2024</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Questions and Answers -->
+    <section class="questions" id="questions">
+      <div class="faq-label">
+        <h1 class="section-label">Questions & Réponses</h1>
+      </div>
+      <div class="faq__list">
+        <article class="faq__item">
+          <button
+            class="faq__trigger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="faq-panel-1"
+            id="faq-trigger-1"
+          >
+            <span class="faq__question"
+              >Vous travaillez avec quel type de clients ?</span
+            >
+            <span class="faq__icon" aria-hidden="true"><span></span></span>
+          </button>
+          <div
+            class="faq__panel"
+            id="faq-panel-1"
+            role="region"
+            aria-labelledby="faq-trigger-1"
+            aria-hidden="true"
+          >
+            <div class="faq__content">
+              <p>
+                Startups, SaaS, agences ou indépendants qui ont besoin de
+                transformer un design Figma en site propre et performant.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="faq__item">
+          <button
+            class="faq__trigger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="faq-panel-2"
+            id="faq-trigger-2"
+          >
+            <span class="faq__question"
+              >Quels outils et technologies utilisez-vous ?</span
+            >
+            <span class="faq__icon" aria-hidden="true"><span></span></span>
+          </button>
+          <div
+            class="faq__panel"
+            id="faq-panel-2"
+            role="region"
+            aria-labelledby="faq-trigger-2"
+            aria-hidden="true"
+          >
+            <div class="faq__content">
+              <p>
+                Next.js, React, CSS Modules et Tailwind, GSAP pour les
+                animations, Lenis pour le scroll fluide — en revanche, je
+                n'utilise pas Framer, ni WordPress.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="faq__item">
+          <button
+            class="faq__trigger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="faq-panel-3"
+            id="faq-trigger-3"
+          >
+            <span class="faq__question"
+              >Vous pouvez intervenir sur un projet déjà en cours ?</span
+            >
+            <span class="faq__icon" aria-hidden="true"><span></span></span>
+          </button>
+          <div
+            class="faq__panel"
+            id="faq-panel-3"
+            role="region"
+            aria-labelledby="faq-trigger-3"
+            aria-hidden="true"
+          >
+            <div class="faq__content">
+              <p>
+                Oui, que ce soit pour ajouter une fonctionnalité, modifier une
+                page ou corriger des bugs.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="faq__item">
+          <button
+            class="faq__trigger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="faq-panel-4"
+            id="faq-trigger-4"
+          >
+            <span class="faq__question"
+              >Combien de temps prend un projet ?</span
+            >
+            <span class="faq__icon" aria-hidden="true"><span></span></span>
+          </button>
+          <div
+            class="faq__panel"
+            id="faq-panel-4"
+            role="region"
+            aria-labelledby="faq-trigger-4"
+            aria-hidden="true"
+          >
+            <div class="faq__content">
+              <p>
+                Un site vitrine ou portfolio : 2 à 4 semaines selon la
+                complexité des animations et du contenu.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="faq__item">
+          <button
+            class="faq__trigger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="faq-panel-6"
+            id="faq-trigger-6"
+          >
+            <span class="faq__question">C'est quoi votre tarif ?</span>
+            <span class="faq__icon" aria-hidden="true"><span></span></span>
+          </button>
+          <div
+            class="faq__panel"
+            id="faq-panel-6"
+            role="region"
+            aria-labelledby="faq-trigger-6"
+            aria-hidden="true"
+          >
+            <div class="faq__content">
+              <p>
+                Je travaille au projet ou à la journée. Pour un site vitrine,
+                des tarifs qui démarrent à 150€ selon vos besoins.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="connect" id="contact">
+      <div class="connect-bar">
+        <div class="connect-col">
+          <p class="section-label">Contact</p>
+        </div>
+
+        <div class="connect-col">
+          <a>Email</a>
+          <a>Discord</a>
+        </div>
+
+        <div class="connect-col">
+          <a href="#hero">Accueil</a>
+          <a href="#about">A Propos</a>
+          <a href="#projects">Projets</a>
+          <a href="#questions">Questions</a>
+        </div>
+
+        <div class="connect-cta">
+          <button class="connect-cta-button">
+            Contacte Moi
+            <svg
+              fill="white"
+              height="24"
+              width="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== ABOUT PANEL ===================== -->
+    <div class="about-panel-overlay" id="about-panel-overlay"></div>
+
+    <div
+      class="about-panel"
+      id="about-panel"
+      aria-hidden="true"
+      data-lenis-prevent
+    >
+      <div class="about-panel-inner">
+        <div class="about-panel-header">
+          <span class="section-label">
+            <span class="about-panel-dot"></span>
+            About me
+          </span>
+          <button class="about-panel-close" aria-label="Close">
+            <span class="about-panel-close-icon">
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+        </div>
+
+        <div class="about-panel-body">
+          <p class="about-line">
+            Hey, je suis Artzain. J'ai lancé ma carrière parce que trop de
+            fondateurs se contentent de sites templates qui ne reflètent pas
+            l'ambition de ce qu'ils construisent.
+          </p>
+          <p class="about-line">
+            Cet écart, c'est mon obsession. Chaque projet part de zéro, pas de
+            page builder, pas de template, juste du code, du mouvement et de
+            l'intention.
+          </p>
+          <p class="about-line">
+            Quand tu bosses avec moi, t'as un site construit par une seule
+            personne qui fait attention à chaque pixel et chaque milliseconde
+            d'interaction.
+          </p>
+        </div>
+
+        <div class="about-panel-principles">
+          <div class="about-panel-principles-label">
+            <span class="about-panel-dot"></span>
+            Mes principes
+          </div>
+
+          <div class="principles-list">
+            <div class="principle-item">
+              <h3>Le résultat avant tout</h3>
+              <p>
+                Chaque décision créative répond à une seule question : est-ce
+                que ça sert réellement ta croissance ?
+              </p>
+            </div>
+
+            <div class="principle-item">
+              <h3>Codé sur-mesure, toujours</h3>
+              <p>
+                Codé sur-mesure, toujours Pas d'outils no-code, pas de
+                templates. Chaque interaction est construite de zéro pour coller
+                exactement à ta marque.
+              </p>
+            </div>
+
+            <div class="principle-item">
+              <h3>Une seule personne, responsable de tout</h3>
+              <p>
+                Tu travailles directement avec la personne qui écrit le code,
+                pas d'intermédiaire, pas de communication diluée.
+              </p>
+            </div>
+
+            <div class="principle-item">
+              <h3>Du mouvement avec une intention</h3>
+              <p>
+                L'animation, c'est pas de la déco. Chaque scroll, chaque
+                transition mérite sa place ou elle ne sort pas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
